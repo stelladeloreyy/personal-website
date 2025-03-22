@@ -1,16 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import './Home.css';
+import NavBar from '../components/NavBar'
 
 const Home = () => {
     return (
-        <div className="main-container">
-            <div className="header">
-                <Link className={"hs-l"} to ="/">about me</Link>
-                <Link className={"hs-l"} to ="/projects">projects</Link>
-                <Link className={"hs-l"} to ="/resume">resume</Link>
-                <Link className={"hs-r"} to ="/contact">contact</Link>
+        <div className="home-container">
+            <NavBar />
+            <div className="page-container">
+                <p>Stella Delorey</p>
             </div>
         </div>
     );

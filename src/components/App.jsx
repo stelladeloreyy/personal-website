@@ -5,14 +5,6 @@
 // function App() {
 //   return (
 //     <div className="bg-container">
-//       <div className="header">
-//         <p className="hs-l">about me</p>
-//         <p className="hs-l">projects</p>
-//         <p className="hs-l">resume</p>
-//         <p className="hs-r">contact</p>
-//         <p className="hs-r">EN</p>
-//         <p className="hs-r">FR</p>
-//       </div>
 //       <div className="page-container">
 //         <img className="grid-pages" src={gridPages} alt="" />
 //       </div>
@@ -27,7 +19,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Home from "../pages/Home";
 import Projects from "../pages/Projects";
 import Resume from "../pages/Resume";
-import Contact from "../pages/Contact";
+import ContactMe from "../pages/ContactMe";
 
 
 function App() {
@@ -38,7 +30,7 @@ function App() {
           <Route exact path='/' element={<Home />}></Route>
           <Route exact path='/projects' element={<Projects />}></Route>
           <Route exact path='/resume' element={<Resume />}></Route>
-          <Route exact path='/contact' element={<Contact />}></Route>
+          <Route exact path='/contact-me' element={<ContactMe />}></Route>
           <Route path="*" element={<Navigate to='/' />}></Route>
         </Routes>
       </Router>
