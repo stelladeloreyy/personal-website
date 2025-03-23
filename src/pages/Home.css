@@ -4,22 +4,42 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    margin-top: 60px;
 }
 
-Navbar {
-    width: 100%;
+.header-sticky {
     position: fixed;
     top: 0;
+    width: 100%;
+    background-color: white;
+    padding-top: 60px;
+    padding-bottom: none !important;
 }
 
 /*grid pages section*/
 .page-container {
+    margin-top: 210px;
+    margin-bottom: 50px;
+    margin-right: 40vh;
+    margin-left: 35vh;
     display: flex;
     justify-content: center;
     object-fit: cover;
-    margin-top: 60px;
-    background-image: url('../assets/images/grid-notebook-pages.png');
+    height: 112.5vh;
+    align-items: center;
+    background-image: url('../assets/images/ripped-paper.png');
     background-size: cover;
+}
+
+/*personal photos section*/
+.personal-photos {
+    margin-top: 250px;
+    margin-right: 40vh;
+    margin-left: 40vh;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
     height: 100vh;
+    align-items: center;
+    background-image: url('../assets/images/about-me-photos.png');
+    background-size: cover;
 }

@@ -31,8 +31,10 @@ const Header = () => {
             </div>
             <div className="header-right">
                 <Link style={{ fontFamily: 'Inter', color: 'black', textDecoration: 'none' }} to ="/contact-me">contact me</Link>
-                <p>EN</p>
-                <p>FR</p>
+                <div className="language-switch">
+                    <p>EN</p>
+                    <p>FR</p>
+                </div>
             </div>
         </div>
     );
