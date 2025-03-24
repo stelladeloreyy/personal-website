@@ -7,7 +7,7 @@ const ContactMe = () => {
     return (
         <div className="contactme-container">
             <div className="header-sticky">
-                <NavBar />
+                <NavBar section='contact' />
             </div>
             <h1>Contact Me</h1>
         </div>

@@ -1,19 +1,24 @@
 import React from 'react';
 
 import './Home.css';
-import NavBar from '../components/NavBar'
+import NavBar from '../components/NavBar';
+import NameSketch from '../assets/images/name-sketch.png';
+import GreetingText from '../assets/images/greeting-text.png';
 
 const Home = () => {
     return (
         <div className="home-container">
             <div className="header-sticky">
-                <NavBar />
+                <NavBar section='about' />
             </div>
             <div className="page-container">
-                <p>Stella Delorey</p>
+                <img className="name-sketch" src={NameSketch} alt="Stella Delorey"></img>
+            </div>
+            <div className="greeting-text">
+                <img src={GreetingText} alt="Nice to meet you!"></img>
             </div>
             <div className="personal-photos">
-                
+
             </div>
         </div>
     );

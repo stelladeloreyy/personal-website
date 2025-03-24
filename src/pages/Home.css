@@ -30,15 +30,29 @@
     background-size: cover;
 }
 
-/*personal photos section*/
-.personal-photos {
-    margin-top: 250px;
-    margin-right: 40vh;
-    margin-left: 40vh;
+.name-sketch {
+    height: 100vh;
+    padding-left:15%;
+}
+
+.greeting-text {
     display: flex;
     justify-content: center;
+    padding-top: 10vh;
+}
+
+.greeting-text img {
+    width: 25vw;
+}
+
+/*personal photos section*/
+.personal-photos {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     object-fit: cover;
-    height: 100vh;
+    height: 90vh;
     align-items: center;
     background-image: url('../assets/images/about-me-photos.png');
     background-size: cover;

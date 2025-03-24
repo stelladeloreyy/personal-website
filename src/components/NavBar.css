@@ -17,6 +17,25 @@
     margin-left: 17%;
 }
 
+.active-link {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 4vw;
+}
+
+.active-link img {
+    padding-top: 3px;
+    height: 1.7vh;
+    width: 4vw;
+}
+
+.active-link.projects img {
+    padding-top: 3px;
+    height: 1.7vh;
+    width: 3.3vw;
+}
+
 .header-right {
     display: flex;
     flex-direction: row;
@@ -33,5 +52,39 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 25%;
+    width: 30%;
+}
+
+.language-col {
+    display: flex;
+    flex-direction: column;
+    width: 7vw;
+}
+
+.underline {
+    height: 1.7vh;
+    width: 2.25vw;
+    padding-left: 3px;
+}
+
+.english-switch {
+    color: white;
+    background-color: white;
+    outline: none;
+    border: none;
+}
+
+.english-switch img{
+    height: 2.5vh;
+}
+
+.french-switch {
+    color: white;
+    background-color: white;
+    outline: none;
+    border: none;
+}
+
+.french-switch img{
+    height: 2.5vh;
 }

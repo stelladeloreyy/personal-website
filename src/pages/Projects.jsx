@@ -7,7 +7,7 @@ const Projects = () => {
     return (
         <div className="projects-container">
             <div className="header-sticky">
-                <NavBar />
+                <NavBar section='projects' />
             </div>
             <h1>Projects</h1>
         </div>
