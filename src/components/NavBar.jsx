@@ -11,6 +11,7 @@ const Header = ({ section }) => {
     const [aboutHover, setAboutHover] = useState(false);
     const [projectsHover, setProjectsHover] = useState(false);
     const [contactHover, setContactHover] = useState(false);
+    const [resumeHover, setResumeHover] = useState(false);
 
     const [language, setLanguage] = useState("en");
     const [enHover, setEnHover] = useState(false);
@@ -19,7 +20,7 @@ const Header = ({ section }) => {
     return (
         <div className="header-container">
             <div className="header-left">
-                <div className="active-link">
+                <div className="active-link about">
                     <Link 
                         to ="/"
                         style={{ fontFamily: 'Inter', color: 'black', textDecoration: 'none' }}
@@ -39,16 +40,19 @@ const Header = ({ section }) => {
                     </Link>
                     {(section==="projects" || projectsHover) && <img src={Underline} alt="underline" />}
                 </div>
-                <div className="active-link">
+                <div className="active-link resume">
                     <Link 
                         to ="/resume"
-                        style={{ fontFamily: 'Inter', color: 'black', textDecoration: 'none' }}>
+                        style={{ fontFamily: 'Inter', color: 'black', textDecoration: 'none' }}
+                        onMouseEnter={() => setResumeHover(true)}
+                        onMouseLeave={() => setResumeHover(false)}>
                             resume
                     </Link>
+                    {resumeHover && <img src={Underline} alt="underline" />}
                 </div>
             </div>
             <div className="header-right">
-                <div className="active-link">
+                <div className="active-link contact">
                     <Link 
                         to ="/contact-me"
                         style={{ fontFamily: 'Inter', color: 'black', textDecoration: 'none' }}

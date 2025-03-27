@@ -7,24 +7,31 @@
 }
 
 .header-sticky {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     background-color: white;
-    padding-top: 60px;
-    padding-bottom: none !important;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /*grid pages section*/
 .page-container {
-    margin-top: 210px;
+    display: flex;
+    justify-content: center;
+    width: 98vw;
+}
+
+.lined-page {
+    margin-top: 80px;
     margin-bottom: 50px;
-    margin-right: 40vh;
-    margin-left: 35vh;
+    padding-right: 15vw;
+    padding-left: 8vw;
     display: flex;
     justify-content: center;
     object-fit: cover;
-    height: 112.5vh;
+    width: 55vw;
     align-items: center;
     background-image: url('../assets/images/ripped-paper.png');
     background-size: cover;
@@ -33,6 +40,7 @@
 .name-sketch {
     height: 100vh;
     padding-left:15%;
+    padding-bottom: 3vh;
 }
 
 .greeting-text {

@@ -12,7 +12,9 @@ const Home = () => {
                 <NavBar section='about' />
             </div>
             <div className="page-container">
-                <img className="name-sketch" src={NameSketch} alt="Stella Delorey"></img>
+                <div className="lined-page">
+                    <img className="name-sketch" src={NameSketch} alt="Stella Delorey"></img>
+                </div>
             </div>
             <div className="greeting-text">
                 <img src={GreetingText} alt="Nice to meet you!"></img>

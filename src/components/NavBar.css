@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 20px;
+    margin-left: 4vw;
     margin-right: 20px;
     margin-top: 15px;
-    width: 100%;
+    width: 95%;
     font-family: 'Inter';
 }
 
@@ -14,14 +14,14 @@
     flex-direction: row;
     justify-content: space-between;
     width: 20%;
-    margin-left: 17%;
+    margin-left: 12%;
 }
 
 .active-link {
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 4vw;
+    width: 6vw;
 }
 
 .active-link img {
@@ -33,7 +33,25 @@
 .active-link.projects img {
     padding-top: 3px;
     height: 1.7vh;
-    width: 3.3vw;
+    width: 4vw;
+}
+
+.active-link.about img {
+    padding-top: 3px;
+    height: 1.7vh;
+    width: 4.8vw;
+}
+
+.active-link.resume img {
+    padding-top: 3px;
+    height: 1.7vh;
+    width: 3.8vw;
+}
+
+.active-link.contact img {
+    padding-top: 3px;
+    height: 1.7vh;
+    width: 6vw;
 }
 
 .header-right {

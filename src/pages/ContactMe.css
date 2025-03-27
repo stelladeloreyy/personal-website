@@ -7,10 +7,11 @@
 }
 
 .header-sticky {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     background-color: white;
-    padding-top: 60px;
-    padding-bottom: 100px;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
