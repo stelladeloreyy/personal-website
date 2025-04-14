@@ -15,3 +15,13 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+.title-container img {
+    width: 15vw;
+}

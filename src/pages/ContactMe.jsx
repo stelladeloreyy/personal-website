@@ -2,6 +2,7 @@ import React from "react";
 
 import './ContactMe.css';
 import NavBar from '../components/NavBar'
+import Title from '../assets/images/contact-me-text.png';
 
 const ContactMe = () => {
     return (
@@ -9,7 +10,9 @@ const ContactMe = () => {
             <div className="header-sticky">
                 <NavBar section='contact' />
             </div>
-            <h1>Contact Me</h1>
+            <div className="title-container">
+                <img src={Title}  alt="Contact Me" />
+            </div>
         </div>
     );
 };

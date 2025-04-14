@@ -19,8 +19,9 @@ const Home = () => {
             <div className="greeting-text">
                 <img src={GreetingText} alt="Nice to meet you!"></img>
             </div>
-            <div className="personal-photos">
-
+            <div className="personal-photos"></div>
+            <div className="footer-container">
+                
             </div>
         </div>
     );

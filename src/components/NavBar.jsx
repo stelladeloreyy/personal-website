@@ -41,13 +41,15 @@ const Header = ({ section }) => {
                     {(section==="projects" || projectsHover) && <img src={Underline} alt="underline" />}
                 </div>
                 <div className="active-link resume">
-                    <Link 
-                        to ="/resume"
+                    <a 
+                        href="https://drive.google.com/file/d/1wGLOqlPO8CJKN7bYrrrwX-6s4wFhAon6/view?usp=sharing"
+                        target="_blank"
+                        rel="noreferrer"
                         style={{ fontFamily: 'Inter', color: 'black', textDecoration: 'none' }}
                         onMouseEnter={() => setResumeHover(true)}
                         onMouseLeave={() => setResumeHover(false)}>
                             resume
-                    </Link>
+                    </a>
                     {resumeHover && <img src={Underline} alt="underline" />}
                 </div>
             </div>

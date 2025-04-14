@@ -65,3 +65,15 @@
     background-image: url('../assets/images/about-me-photos.png');
     background-size: cover;
 }
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    height: 40vh;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    align-items: center;
+    background-image: url('../assets/images/footer-paper.png');
+    background-size: cover;
+}
