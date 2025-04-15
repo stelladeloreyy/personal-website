@@ -11,7 +11,7 @@ const ContactMe = () => {
                 <NavBar section='about' />
             </div>
             <div className="title-container">
-                About me
+                
             </div>
             <div className="personal-statement">
                 <div className="statement-title">

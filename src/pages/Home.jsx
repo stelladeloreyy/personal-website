@@ -20,7 +20,7 @@ const Home = () => {
             <div className="greeting-text">
                 {/* <img src={GreetingText} alt="Nice to meet you!"></img> */}
                 <div className="greeting-rows">
-                    <p>It's so </p> <h1>nice </h1> <p>to meet you!</p>
+                    <p>It's so </p> <h1>lovely </h1> <p>to meet you!</p>
                 </div>
             </div>
             <div className="personal-photos"></div>
