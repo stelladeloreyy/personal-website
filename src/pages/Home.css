@@ -24,29 +24,31 @@
 }
 
 .lined-page {
+    margin-right: 5vw;
     margin-top: 80px;
-    margin-bottom: 50px;
-    padding-right: 15vw;
+    margin-bottom: 90px;
+    padding-right: 25vw;
     padding-left: 8vw;
     display: flex;
     justify-content: center;
     object-fit: cover;
-    width: 55vw;
+    width: 20vw;
+    height: 110vh;
     align-items: center;
     background-image: url('../assets/images/ripped-paper.png');
     background-size: cover;
 }
 
 .name-sketch {
-    height: 100vh;
-    padding-left:15%;
+    height: 80vh;
+    padding-left:27vw;
     padding-bottom: 3vh;
 }
 
 .greeting-text {
     display: flex;
     justify-content: center;
-    padding-top: 10vh;
+    padding-top: 5vh;
 }
 
 .greeting-text img {
@@ -66,14 +68,32 @@
     background-size: cover;
 }
 
-.footer-container {
+.footer {
     display: flex;
     justify-content: center;
-    object-fit: cover;
-    height: 40vh;
-    margin-right: 5vw;
-    margin-left: 5vw;
-    align-items: center;
-    background-image: url('../assets/images/footer-paper.png');
-    background-size: cover;
+}
+
+.greeting-rows {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5vw;
+}
+
+.greeting-rows h1{
+    font-family: "Pinyon Script", cursive;
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0px;
+    color: #9c4d95;
+}
+
+.greeting-rows p{
+    padding-top: 2vh;
+    font-family: "STIX Two Text", serif;
+    font-size: 30px;;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0px;
+    color: #333333;
 }

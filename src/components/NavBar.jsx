@@ -8,9 +8,9 @@ import FrenchSwitch from '../assets/images/fr.png';
 import Underline from '../assets/images/underline.png';
 
 const Header = ({ section }) => { 
+    const [homeHover, setHomeHover] = useState(false);
     const [aboutHover, setAboutHover] = useState(false);
     const [projectsHover, setProjectsHover] = useState(false);
-    const [contactHover, setContactHover] = useState(false);
     const [resumeHover, setResumeHover] = useState(false);
 
     const [language, setLanguage] = useState("en");
@@ -20,9 +20,19 @@ const Header = ({ section }) => {
     return (
         <div className="header-container">
             <div className="header-left">
-                <div className="active-link about">
+                <div className="active-link home">
                     <Link 
                         to ="/"
+                        style={{ fontFamily: 'Inter', color: 'black', textDecoration: 'none' }}
+                        onMouseEnter={() => setHomeHover(true)}
+                        onMouseLeave={() => setHomeHover(false)}>
+                            home
+                    </Link>
+                    {(section==="home" || homeHover) && <img src={Underline} alt="underline" />}
+                </div>
+                <div className="active-link about">
+                    <Link 
+                        to ="/about"
                         style={{ fontFamily: 'Inter', color: 'black', textDecoration: 'none' }}
                         onMouseEnter={() => setAboutHover(true)}
                         onMouseLeave={() => setAboutHover(false)}>
@@ -40,6 +50,8 @@ const Header = ({ section }) => {
                     </Link>
                     {(section==="projects" || projectsHover) && <img src={Underline} alt="underline" />}
                 </div>
+            </div>
+            <div className="header-right">
                 <div className="active-link resume">
                     <a 
                         href="https://drive.google.com/file/d/1wGLOqlPO8CJKN7bYrrrwX-6s4wFhAon6/view?usp=sharing"
@@ -51,17 +63,6 @@ const Header = ({ section }) => {
                             resume
                     </a>
                     {resumeHover && <img src={Underline} alt="underline" />}
-                </div>
-            </div>
-            <div className="header-right">
-                <div className="active-link contact">
-                    <Link 
-                        to ="/contact-me"
-                        style={{ fontFamily: 'Inter', color: 'black', textDecoration: 'none' }}
-                        onMouseEnter={() => setContactHover(true)}
-                        onMouseLeave={() => setContactHover(false)}>contact me
-                    </Link>
-                    {(section==="contact" || contactHover) && <img src={Underline} alt="underline" />}
                 </div>
                 <div className="language-switch">
                     <div className="language-col">

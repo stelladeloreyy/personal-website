@@ -42,6 +42,12 @@
     width: 4.8vw;
 }
 
+.active-link.home img {
+    padding-top: 3px;
+    height: 1.7vh;
+    width: 3vw;
+}
+
 .active-link.resume img {
     padding-top: 3px;
     height: 1.7vh;
