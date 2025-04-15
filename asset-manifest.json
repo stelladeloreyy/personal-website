@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/stelladelorey.com/static/css/main.180742a3.css",
-    "main.js": "/stelladelorey.com/static/js/main.782b11b1.js",
-    "static/js/453.aac68abc.chunk.js": "/stelladelorey.com/static/js/453.aac68abc.chunk.js",
-    "static/media/ripped-paper.png": "/stelladelorey.com/static/media/ripped-paper.a4b6e52b6eba676e2ac8.png",
-    "static/media/name-sketch.png": "/stelladelorey.com/static/media/name-sketch.c83c9ffaafd2d065f124.png",
-    "static/media/about-me-photos.png": "/stelladelorey.com/static/media/about-me-photos.a48386a3b7cac515e514.png",
-    "static/media/rotary-phone.png": "/stelladelorey.com/static/media/rotary-phone.fba19ce07ef5f58c9f83.png",
-    "static/media/sparkles.png": "/stelladelorey.com/static/media/sparkles.828e61922c443c9b27d2.png",
-    "static/media/projects-empty.png": "/stelladelorey.com/static/media/projects-empty.117812c56aa8b9b6179f.png",
-    "static/media/en.png": "/stelladelorey.com/static/media/en.e6b2b1dbe9f0ac3b6abe.png",
-    "static/media/fr.png": "/stelladelorey.com/static/media/fr.c5c0592e7e0438e0df7f.png",
-    "index.html": "/stelladelorey.com/index.html",
-    "main.180742a3.css.map": "/stelladelorey.com/static/css/main.180742a3.css.map",
-    "main.782b11b1.js.map": "/stelladelorey.com/static/js/main.782b11b1.js.map",
-    "453.aac68abc.chunk.js.map": "/stelladelorey.com/static/js/453.aac68abc.chunk.js.map"
+    "main.css": "/personal-website/static/css/main.b62d6f10.css",
+    "main.js": "/personal-website/static/js/main.db43edce.js",
+    "static/js/453.aac68abc.chunk.js": "/personal-website/static/js/453.aac68abc.chunk.js",
+    "static/media/ripped-paper.png": "/personal-website/static/media/ripped-paper.a4b6e52b6eba676e2ac8.png",
+    "static/media/name-sketch.png": "/personal-website/static/media/name-sketch.c83c9ffaafd2d065f124.png",
+    "static/media/about-me-photos.png": "/personal-website/static/media/about-me-photos.a48386a3b7cac515e514.png",
+    "static/media/rotary-phone.png": "/personal-website/static/media/rotary-phone.fba19ce07ef5f58c9f83.png",
+    "static/media/sparkles.png": "/personal-website/static/media/sparkles.828e61922c443c9b27d2.png",
+    "static/media/projects-empty.png": "/personal-website/static/media/projects-empty.117812c56aa8b9b6179f.png",
+    "static/media/en.png": "/personal-website/static/media/en.e6b2b1dbe9f0ac3b6abe.png",
+    "static/media/fr.png": "/personal-website/static/media/fr.c5c0592e7e0438e0df7f.png",
+    "index.html": "/personal-website/index.html",
+    "main.b62d6f10.css.map": "/personal-website/static/css/main.b62d6f10.css.map",
+    "main.db43edce.js.map": "/personal-website/static/js/main.db43edce.js.map",
+    "453.aac68abc.chunk.js.map": "/personal-website/static/js/453.aac68abc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.180742a3.css",
-    "static/js/main.782b11b1.js"
+    "static/css/main.b62d6f10.css",
+    "static/js/main.db43edce.js"
   ]
 }
