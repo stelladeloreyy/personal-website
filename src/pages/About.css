@@ -41,7 +41,7 @@
 }
 
 .greeting-text h2{
-    padding-top: 3vh;
+    padding-top: 3.5vh;
     font-family: "STIX Two Text", serif;
     font-size: 35px;;
     font-weight: 400;
@@ -61,7 +61,7 @@
 }
 
 .introduction-container h2{
-    padding-top: 3vh;
+    padding-top: 3.5vh;
     font-family: "STIX Two Text", serif;
     font-size: 35px;;
     font-weight: 400;
@@ -110,7 +110,7 @@
 }
 
 .introduction-container img {
-    width: 20vw;
+    width: 25vw;
 }
 
 .introduction-text {
