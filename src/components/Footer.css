@@ -9,7 +9,7 @@
     margin-left: 23vw;
     margin-right: 15vw;
     margin-bottom: 5vh;
-    margin-top: 7vh;
+    margin-top: 10vh;
     width: 95%;
     font-family: 'Inter';
     color: #333333;
@@ -31,11 +31,10 @@
 }
 
 .contact-title {
-    margin-top: 12vh;
     display: flex;
     flex-direction: row;
     gap: 0.5vw;
-    width: 25vw;
+    margin-right: 1vw;
 }
 
 .contact-title h1{
@@ -83,10 +82,10 @@
 }
 
 .small-text {
-    margin-top: 10vh;
     font-size: 15px;
     font-family: 'Inter';
     color: #333333;
+    margin-top: 7vh;
 }
 
 .small-text p {
@@ -96,7 +95,7 @@
 
 .sparkles {
     margin-left: 0px;
-    margin-top: 18vh;;
+    margin-top: 6vh;
 }
 
 .sparkles img {
