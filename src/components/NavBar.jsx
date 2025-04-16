@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import './NavBar.css';
 import EnglishSwitch from '../assets/images/en.png';
-import FrenchSwitch from '../assets/images/fr.png';
+// import FrenchSwitch from '../assets/images/fr.png';
 import Underline from '../assets/images/underline.png';
 
 const Header = ({ section }) => { 
@@ -15,7 +15,7 @@ const Header = ({ section }) => {
 
     const [language, setLanguage] = useState("en");
     const [enHover, setEnHover] = useState(false);
-    const [frHover, setFrHover] = useState(false);
+    // const [frHover, setFrHover] = useState(false);
 
     return (
         <div className="header-container">
@@ -76,14 +76,14 @@ const Header = ({ section }) => {
                         {(language==="en" || enHover) && <img src={Underline} className="underline" alt="underline" />}
                     </div>
                     <div className="language-col">
-                        <button 
+                        {/* <button 
                             className="french-switch"
                             onClick={() => setLanguage("fr")}
                             onMouseEnter={() => setFrHover(true)}
                             onMouseLeave={() => setFrHover(false)}>
                                 <img src={FrenchSwitch} alt="FR"/>
                         </button>
-                        {(language==="fr" || frHover) && <img src={Underline} className="underline" alt="underline" />}
+                        {(language==="fr" || frHover) && <img src={Underline} className="underline" alt="underline" />} */}
                     </div>
                 </div>
             </div>

@@ -41,11 +41,73 @@ h1{
 }
 
 h2{
-    padding-top: 2vh;
+    padding-top: 3vh;
     font-family: "STIX Two Text", serif;
-    font-size: 40px;;
+    font-size: 35px;;
     font-weight: 400;
     font-style: normal;
     margin-bottom: 0px;
     color: #333333;
 }
+
+p{
+    font-family: "Inter";
+    color: #333333;
+    margin-left: 1vw;
+    line-height: 2.5vh;
+}
+
+b {
+    color: #9c4d95;
+}
+
+a{
+    text-decoration: none;
+    color: #9c4d95;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.personal-photos-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 7vh;
+}
+
+.personal-photos-container img {
+    width: 45vw;
+}
+
+.introduction-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.introduction-container img {
+    width: 20vw;
+}
+
+.introduction-text {
+    margin-right: 3vw;
+    margin-top: 3vh;
+}
+
+.intro-title {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.greeting-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1vw;
+}
+

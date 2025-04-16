@@ -4,7 +4,6 @@ import './Home.css';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import NameSketch from '../assets/images/name-sketch.png';
-//  import GreetingText from '../assets/images/greeting-text.png';
 
 const Home = () => {
     return (
@@ -17,13 +16,12 @@ const Home = () => {
                     <img className="name-sketch" src={NameSketch} alt="Stella Delorey"></img>
                 </div>
             </div>
-            <div className="greeting-text">
-                {/* <img src={GreetingText} alt="Nice to meet you!"></img> */}
+            {/* <div className="greeting-text">
                 <div className="greeting-rows">
                     <p>It's so </p> <h1>lovely </h1> <p>to meet you!</p>
                 </div>
             </div>
-            <div className="personal-photos"></div>
+            <div className="personal-photos"></div> */}
             <div className="footer">
                 <Footer />
             </div>
