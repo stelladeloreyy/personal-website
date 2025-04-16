@@ -5,17 +5,18 @@
 .footer-container {
     display: flex;
     flex-direction: row;
-    gap: 12vw;
+    gap: 4vw;
     margin-left: 23vw;
     margin-right: 15vw;
     margin-bottom: 5vh;
+    margin-top: 7vh;
     width: 95%;
     font-family: 'Inter';
     color: #333333;
 }
 
 .phone-image img {
-    width: 20vw;
+    width: 17vw;
 }
 
 .sparkles-split {

@@ -8,6 +8,9 @@ import Sparkles from "./../assets/images/sparkles.png";
 const Footer = () => { 
     return (
         <div className="footer-container">
+            <div className="phone-image">
+                <img src={Phone} alt="Rotary phone drawing" />
+            </div>
             <div className="contact-text">
                 <div className="sparkles-split">
                     <div className="sparkles-text">
@@ -33,9 +36,6 @@ const Footer = () => {
                     <p>Stella Delorey - © 2025</p>
                     <p>I'm a huge talker, doesn't matter the topic!</p>
                 </div>
-            </div>
-            <div className="phone-image">
-                <img src={Phone} alt="Rotary phone drawing" />
             </div>
         </div>
     );
