@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.3efc2c12.css",
-    "main.js": "/static/js/main.fc58eec3.js",
+    "main.css": "/static/css/main.67b07e1b.css",
+    "main.js": "/static/js/main.fef73e3b.js",
     "static/js/453.aac68abc.chunk.js": "/static/js/453.aac68abc.chunk.js",
     "static/media/ripped-paper.png": "/static/media/ripped-paper.a4b6e52b6eba676e2ac8.png",
     "static/media/name-sketch.png": "/static/media/name-sketch.c83c9ffaafd2d065f124.png",
-    "static/media/about-me-photos.png": "/static/media/about-me-photos.a48386a3b7cac515e514.png",
+    "static/media/about-me-photos.png": "/static/media/about-me-photos.628cf130e8a3b8ca3339.png",
+    "static/media/goose-print.png": "/static/media/goose-print.610fcd83d52fddd64802.png",
     "static/media/rotary-phone.png": "/static/media/rotary-phone.fba19ce07ef5f58c9f83.png",
     "static/media/sparkles.png": "/static/media/sparkles.828e61922c443c9b27d2.png",
     "static/media/projects-empty.png": "/static/media/projects-empty.117812c56aa8b9b6179f.png",
     "static/media/en.png": "/static/media/en.e6b2b1dbe9f0ac3b6abe.png",
-    "static/media/fr.png": "/static/media/fr.c5c0592e7e0438e0df7f.png",
     "index.html": "/index.html",
-    "main.3efc2c12.css.map": "/static/css/main.3efc2c12.css.map",
-    "main.fc58eec3.js.map": "/static/js/main.fc58eec3.js.map",
+    "main.67b07e1b.css.map": "/static/css/main.67b07e1b.css.map",
+    "main.fef73e3b.js.map": "/static/js/main.fef73e3b.js.map",
     "453.aac68abc.chunk.js.map": "/static/js/453.aac68abc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3efc2c12.css",
-    "static/js/main.fc58eec3.js"
+    "static/css/main.67b07e1b.css",
+    "static/js/main.fef73e3b.js"
   ]
 }
