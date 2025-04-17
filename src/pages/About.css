@@ -106,7 +106,6 @@
     justify-content: center;
     gap: 3vw;
     margin-top: 10vh;
-    margin-bottom: 10vh;
 }
 
 .introduction-container img {
@@ -130,3 +129,13 @@
     gap: 1vw;
 }
 
+.job-experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10vh;
+    object-fit: cover;
+    background-image: url('../assets/images/leading-line.png');
+    background-size: cover;
+    height: 165vh;
+}
