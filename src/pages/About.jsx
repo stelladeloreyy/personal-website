@@ -33,14 +33,14 @@ const ContactMe = () => {
                     </div>
                 </div>
             </div>
+            <div className="job-experience">
+
+            </div>
             <div className="greeting-text">
                     <h2>It's so </h2> <h1>lovely </h1> <h2>to meet you!</h2>
             </div>
             <div className="personal-photos-container">
                 <img src={PersonalPhotos} alt="Personal Photos" ></img>
-            </div>
-            <div className="job-experience">
-
             </div>
             <div className="photos">
 
