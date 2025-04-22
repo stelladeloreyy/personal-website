@@ -31,6 +31,10 @@
     justify-content: center;
 }
 
+.greeting-text {
+    margin-top: 10vh;
+}
+
 .greeting-text h1{
     font-family: "Pinyon Script", cursive;
     font-size: 60px;
@@ -93,7 +97,7 @@
 .personal-photos-container {
     display: flex;
     justify-content: center;
-    margin-top: 7vh;
+    margin-top: 3vh;
 }
 
 .personal-photos-container img {
@@ -129,13 +133,69 @@
     gap: 1vw;
 }
 
+
 .job-experience {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10vh;
     object-fit: cover;
     background-image: url('../assets/images/leading-line.png');
     background-size: cover;
-    height: 200vh;
+    margin-bottom: 5vh;
+    z-index: -2;
+    padding-bottom: 15vh;
+    margin-top: 10vh;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.experience-title {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.experience-title h1{
+    font-family: "Pinyon Script", cursive;
+    font-size: 60px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0px;
+    color: #9c4d95;
+}
+
+.experience-title h2{
+    padding-top: 3.5vh;
+    font-family: "STIX Two Text", serif;
+    font-size: 35px;;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 0px;
+    color: #333333;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-container.first {
+    padding-right: 15vw;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+}
+
+.experience-container.second {
+    padding-left: 15vw;
+}
+
+.experience-container img {
+    width: 35vw;
+    z-index: -1;
 }

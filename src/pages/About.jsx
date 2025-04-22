@@ -5,6 +5,8 @@ import NavBar from '../components/NavBar'
 import Footer from '../components/Footer';
 import PersonalPhotos from '../assets/images/about-me-photos.png';
 import Goose from '../assets/images/goose-print.png';
+// import TicketSunLife from '../assets/images/ticket-sunlife.png'
+// import TicketFirstOntario from '../assets/images/ticket-firstontario.png'
 
 const ContactMe = () => {
     return (
@@ -33,9 +35,22 @@ const ContactMe = () => {
                     </div>
                 </div>
             </div>
-            <div className="job-experience">
-
-            </div>
+            {/* <div className="job-experience">
+                <div className="title-container">
+                    <div className="experience-title">
+                        <h1>E</h1><h2>xperience</h2>
+                    </div>
+                </div>
+                <div className="experience-container first">
+                    <img src={TicketSunLife} alt="Vintage ticket">
+                    </img>
+                </div>
+                <div className="experience-container second">
+                    <img src={TicketFirstOntario} alt="Vintage ticket">
+                    
+                    </img>
+                </div>
+            </div> */}
             <div className="greeting-text">
                     <h2>It's so </h2> <h1>lovely </h1> <h2>to meet you!</h2>
             </div>
