@@ -5,11 +5,11 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import NameSketch from '../assets/images/name-sketch.png';
 
-const Home = () => {
+const Home = ({ lang, setLang }) => {    
     return (
         <div className="home-container">
             <div className="header-sticky">
-                <NavBar section='home' />
+                <NavBar section='home' setLang={setLang} lang={lang} />
             </div>
             <div className="page-container">
                 <div className="lined-page">
@@ -23,7 +23,7 @@ const Home = () => {
             </div>
             <div className="personal-photos"></div> */}
             <div className="footer">
-                <Footer />
+                <Footer lang={lang} />
             </div>
         </div>
     );
