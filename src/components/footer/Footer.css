@@ -1,28 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap");
-
 .footer-container {
     display: flex;
     flex-direction: row;
-    gap: 4vw;
-    margin-left: 19vw;
-    margin-right: 15vw;
-    margin-bottom: 5vh;
-    margin-top: 10vh;
+    justify-content: center;
+    gap: 8%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    margin-top: 3%;
     width: 95%;
     font-family: 'Inter';
     color: #333333;
 }
 
 .phone-image img {
-    width: 17vw;
+    width: 250px;
+    margin-right: 15px;
 }
 
 .sparkles-split {
     display: flex;
     flex-direction: row;
-    margin-top: 2vh;
+    margin-top: 30px;
 }
 
 .contact-text {
@@ -32,9 +30,8 @@
 
 .contact-title {
     display: flex;
-    flex-direction: row;
-    gap: 0.5vw;
-    margin-right: 1vw;
+    flex-direction: column;
+    margin-right: 0px;
 }
 
 .contact-title h1{
@@ -42,14 +39,17 @@
     font-size: 60px;
     font-weight: 400;
     font-style: normal;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+    margin-top: 0px;
     color: #9c4d95;
+    line-height: 50px;
 }
 
 .contact-title p{
-    padding-top: 2vh;
+    padding-top: 15px;
     font-family: "STIX Two Text", serif;
-    font-size: 40px;;
+    font-size: 35px;;
     font-weight: 400;
     font-style: normal;
     margin-bottom: 0px;
@@ -58,12 +58,11 @@
 
 .contact-links {
     margin-left: 1px;
+    margin-top: 0px;
     display: flex;
     flex-direction: row;
-    gap: 2vw;
+    gap: 15px;
     font-family: "Inter";
-    font-size: 20px;
-    margin-top: 1vh;
 }
 
 .contact-links a {
@@ -77,15 +76,15 @@
 }
 
 .contact-links img {
-    width: 1vw;
+    width: 15px;
     margin-left: 4px;
 }
 
 .small-text {
-    font-size: 15px;
+    font-size: 11px;
     font-family: 'Inter';
     color: #333333;
-    margin-top: 7vh;
+    margin-top: 20%;
 }
 
 .small-text p {
@@ -93,11 +92,20 @@
     margin-bottom: 0px;
 }
 
-.sparkles {
-    margin-left: 0px;
-    margin-top: 6vh;
+.sparkles.en {
+    margin-left: 40px;
+    margin-top: 23%;
 }
 
-.sparkles img {
-    width: 5vw;
+.sparkles.fr {
+    margin-left: 10px;
+    margin-top: 20%;
 }
+
+.sparkles.en img {
+    width: 70px;
+}  
+
+.sparkles.fr img {
+    width: 70px;
+}  

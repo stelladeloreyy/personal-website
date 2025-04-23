@@ -1,9 +1,11 @@
 import React from 'react';
 
 import './Home.css';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
-import NameSketch from '../assets/images/name-sketch.png';
+import './Home.mobile.css';
+import NavBar from '../../components/navbar/NavBar';
+import Footer from '../../components/footer/Footer';
+import NameSketch from '../../assets/images/name-sketch.png';
+import LinedPage from '../../assets/images/ripped-paper.png'
 
 const Home = ({ lang, setLang }) => {    
     return (
@@ -13,7 +15,8 @@ const Home = ({ lang, setLang }) => {
             </div>
             <div className="page-container">
                 <div className="lined-page">
-                    <img className="name-sketch" src={NameSketch} alt="Stella Delorey"></img>
+                    <img className="paper-bg" src={LinedPage} alt="Ripped paper" />
+                    <img className="name-sketch" src={NameSketch} alt="Stella Delorey" />
                 </div>
             </div>
             {/* <div className="greeting-text">

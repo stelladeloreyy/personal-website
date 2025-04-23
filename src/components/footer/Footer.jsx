@@ -1,9 +1,10 @@
 import React from 'react';
 
 import './Footer.css';
-import Phone from "./../assets/images/rotary-phone.png";
-import LinkArrow from "./../assets/images/link-arrow.png";
-import Sparkles from "./../assets/images/sparkles.png";
+import './Footer.mobile.css';
+import Phone from "./../../assets/images/rotary-phone.png";
+import LinkArrow from "./../../assets/images/link-arrow.png";
+import Sparkles from "./../../assets/images/sparkles.png";
 
 const Footer = ({ lang }) => { 
     return (
@@ -16,13 +17,13 @@ const Footer = ({ lang }) => {
                     <div className="sparkles-text">
                         {
                             lang === "fr" ? (
-                                <div className="contact-title">
+                                <div className="contact-title fr">
                                     <p>n'hésiter pas à me </p> <h1>contacter !</h1>
                                 </div>
                             )
                             :
                             (
-                                <div className="contact-title">
+                                <div className="contact-title en">
                                     <p>feel free to </p> <h1>reach out!</h1>
                                 </div>
                             )
@@ -38,9 +39,19 @@ const Footer = ({ lang }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="sparkles">
-                        <img src={Sparkles} alt="Sparkles illustration"/>
-                    </div>
+                    {
+                        lang === "fr" ? (
+                            <div className="sparkles fr">
+                                <img src={Sparkles} alt="Sparkles illustration"/>
+                            </div>
+                        )
+                        :
+                        (
+                            <div className="sparkles en">
+                                <img src={Sparkles} alt="Sparkles illustration"/>
+                            </div>
+                        )
+                    }
                 </div>
                 <div className="small-text">
                     <p>Stella Delorey - © 2025</p>

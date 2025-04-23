@@ -1,8 +1,9 @@
 import React from "react";
 
 import './Projects.css';
-import NavBar from '../components/NavBar'
-import ProjectsEmpty from '../assets/images/projects-empty.png';
+import './Projects.mobile.css';
+import NavBar from '../../components/navbar/NavBar'
+import ProjectsEmpty from '../../assets/images/projects-empty.png';
 
 const Projects = ({ setLang, lang }) => {
     return (

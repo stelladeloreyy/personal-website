@@ -1,0 +1,111 @@
+@media only screen and (max-width: 768px) {
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 0vw;
+        margin-right: 0vw;
+        margin-top: 15px;
+        width: 95%;
+        font-family: 'Inter';
+    }
+    
+    .header-left {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 55%;
+        gap: 5px;
+        margin-left: 7%;
+    }
+    
+    .active-link {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        width: 25%;
+        font-size: 14px;
+    }
+
+    .active-link.about {
+        width: 30%;
+    }
+    
+    .active-link img {
+        padding-top: 3px;
+        height: 1.7vh;
+        width: 100%;
+    }
+    
+    .active-link.projects img {
+        width: 60px;
+    }
+    
+    .active-link.about img {
+        width: 75px;
+    }
+    
+    .active-link.home img {
+        width: 50px;
+    }
+    
+    .active-link.resume img {
+        width: 60px;
+    }
+
+    .active-link.resume {
+        width: 50%;
+    }
+    
+    .header-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 17%;
+        margin-right: 15%;
+    }
+    
+    .header-right p {
+        margin: 0px;
+    }
+    
+    .language-switch {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 8%;
+    }
+    
+    .language-col {
+        display: flex;
+        flex-direction: column;
+        width: 7vw;
+    }
+    
+    .underline {
+        width: 28px;
+        padding-left: 3px;
+    }
+    
+    .english-switch {
+        color: white;
+        background-color: white;
+        outline: none;
+        border: none;
+    }
+    
+    .english-switch img{
+        height: 17px;
+    }
+    
+    .french-switch {
+        color: white;
+        background-color: white;
+        outline: none;
+        border: none;
+    }
+    
+    .french-switch img{
+        height: 15px;
+    }
+}

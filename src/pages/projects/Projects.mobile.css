@@ -1,0 +1,30 @@
+@media only screen and (max-width: 768px) {
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .header-sticky {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background-color: white;
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+    }
+    
+    .projects-empty {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .projects-empty img {
+        width: 200vw;
+    }
+}

@@ -3,9 +3,10 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import './NavBar.css';
-import EnglishSwitch from '../assets/images/en.png';
-import FrenchSwitch from '../assets/images/fr.png';
-import Underline from '../assets/images/underline.png';
+import './NavBar.mobile.css';
+import EnglishSwitch from '../../assets/images/en.png';
+import FrenchSwitch from '../../assets/images/fr.png';
+import Underline from '../../assets/images/underline.png';
 
 const Header = ({ section, setLang, lang }) => { 
     const [homeHover, setHomeHover] = useState(false);

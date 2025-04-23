@@ -2,6 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap");
 
+h1 {
+    margin: 0px;
+    padding: 0px;
+    margin-block: 0;
+    font-family: "Pinyon Script", cursive;
+    font-size: 40px;
+    font-weight: 400;
+    font-style: normal;
+    color: #9c4d95;
+}
+
+h2 {
+    margin-top: 10px;
+    padding: 0;
+    margin-block: 0;
+    font-family: "STIX Two Text", serif;
+    font-size: 25px;;
+    font-weight: 400;
+    font-style: normal;
+    color: #333333;
+}
+
+a, b {
+    color: #9c4d95;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .contactme-container {
     display: flex;
     flex-direction: column;
@@ -23,7 +53,7 @@
 .title-container {
     display: flex;
     justify-content: center;
-    padding-top: 5vh;
+    padding-top: 5%;
 }
 
 .footer {
@@ -31,85 +61,35 @@
     justify-content: center;
 }
 
-.greeting-text {
-    margin-top: 10vh;
-}
-
-.greeting-text h1{
-    font-family: "Pinyon Script", cursive;
-    font-size: 60px;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 0px;
-    color: #9c4d95;
-}
-
-.greeting-text h2{
-    padding-top: 3.5vh;
-    font-family: "STIX Two Text", serif;
-    font-size: 35px;;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 0px;
-    color: #333333;
-}
-
-
-.introduction-container h1{
-    font-family: "Pinyon Script", cursive;
-    font-size: 60px;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 0px;
-    color: #9c4d95;
-}
-
-.introduction-container h2{
-    padding-top: 3.5vh;
-    font-family: "STIX Two Text", serif;
-    font-size: 35px;;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 0px;
-    color: #333333;
+.mobile-greeting-split {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
 }
 
 .introduction-container p{
     font-family: "Inter";
     color: #333333;
-    margin-left: 1vw;
-    line-height: 2.5vh;
-}
-
-.introduction-container b {
-    color: #9c4d95;
-}
-
-.introduction-container a{
-    text-decoration: none;
-    color: #9c4d95;
-}
-
-.introduction-container a:hover {
-    text-decoration: underline;
+    line-height: 20px;
 }
 
 .personal-photos-container {
     display: flex;
     justify-content: center;
-    margin-top: 3vh;
+    margin-bottom: 6%;
 }
 
 .personal-photos-container img {
-    width: 45vw;
+    width: 60vw;
 }
 
 .introduction-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 3vw;
-    margin-top: 10vh;
+    gap: 3%;
+    margin-top: 8%;
+    margin-left: 14%;
 }
 
 .introduction-container img {
@@ -117,29 +97,37 @@
 }
 
 .introduction-text {
-    margin-top: 3vh;
+    margin-top: 6%;
+    margin-right: 20%;
 }
 
 .intro-title {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
     gap: 4px;
+}
+
+.mobile-greeting-split h1 {
+    margin-left: 7px;
+    margin-right: 3px;
 }
 
 .greeting-text {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1vw;
+    gap: 5px;
+    align-items: baseline;
+    margin-top: 6%;
 }
-
 
 .job-experience {
     display: flex;
     flex-direction: column;
     justify-content: center;
     object-fit: cover;
-    background-image: url('../assets/images/leading-line.png');
+    background-image: url('../../assets/images/leading-line.png');
     background-size: cover;
     margin-bottom: 5vh;
     z-index: -2;
@@ -157,25 +145,6 @@
     display: flex;
     flex-direction: row;
     gap: 4px;
-}
-
-.experience-title h1{
-    font-family: "Pinyon Script", cursive;
-    font-size: 60px;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 0px;
-    color: #9c4d95;
-}
-
-.experience-title h2{
-    padding-top: 3.5vh;
-    font-family: "STIX Two Text", serif;
-    font-size: 35px;;
-    font-weight: 400;
-    font-style: normal;
-    margin-bottom: 0px;
-    color: #333333;
 }
 
 .experience-container {

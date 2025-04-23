@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap");
+
+@media only screen and (max-width: 768px) {
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+        margin-top: 3%;
+        width: 95%;
+        font-family: 'Inter';
+        color: #333333;
+    }
+    
+    .phone-image img {
+        width: 0px;
+    }
+    
+    .sparkles-split {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+    
+    .contact-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-title {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+    }
+
+    .contact-title h1{
+        font-family: "Pinyon Script", cursive;
+        font-size: 40px;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 15px;
+        margin-left: 0px;
+        margin-top: 0px;
+        color: #9c4d95;
+        line-height: 40px;
+    }
+    
+    .contact-title p{
+        padding-top: 15px;
+        font-family: "STIX Two Text", serif;
+        font-size: 25px;;
+        font-weight: 400;
+        font-style: normal;
+        margin-bottom: 0px;
+        color: #333333;
+    }
+    
+    .contact-links {
+        margin-left: 1px;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        font-family: "Inter";
+        font-size: 15px;
+    }
+    
+    .contact-links a {
+        color: #333333;
+        text-decoration: none;
+    }
+    
+    .contact-links a:hover {
+        color: #333333;
+        text-decoration: underline;
+    }
+    
+    .contact-links img {
+        width: 13px;
+        margin-left: 4px;
+    }
+    
+    .small-text {
+        font-size: 9px;
+        font-family: 'Inter';
+        color: #333333;
+        margin-top: 20%;
+    }
+    
+    .small-text p {
+        margin-top: 4px;
+        margin-bottom: 0px;
+    }
+    
+    .sparkles.en {
+        margin-left: 15px;
+        margin-top: 20%;
+    }
+
+    .sparkles.fr {
+        margin-left: 0vw;
+        margin-top: 20%;
+    }
+    
+    .sparkles.en img {
+        width: 50px;
+    }  
+    
+    .sparkles.fr img {
+        width: 50px;
+    }  
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+    .phone-image img {
+        width: 170px;
+        margin-right: 15px;
+    }
+}
