@@ -28,7 +28,7 @@
     }
 
     .active-link.about {
-        width: 30%;
+        width: 40%;
     }
     
     .active-link img {
@@ -74,6 +74,7 @@
         flex-direction: row;
         justify-content: space-between;
         width: 8%;
+        gap: 7px;
     }
     
     .language-col {
