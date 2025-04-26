@@ -5,6 +5,7 @@ import './About.mobile.css';
 import NavBar from '../../components/navbar/NavBar'
 import Footer from '../../components/footer/Footer';
 import PersonalPhotos from '../../assets/images/about-me-photos.png';
+import PersonalPhotosFr from '../../assets/images/about-me-photos-fr.png';
 import Goose from '../../assets/images/goose-print.png';
 // import TicketSunLife from '../assets/images/ticket-sunlife.png'
 // import TicketFirstOntario from '../assets/images/ticket-firstontario.png'
@@ -91,7 +92,16 @@ const ContactMe = ({ lang, setLang }) => {
                 )
             }
             <div className="personal-photos-container">
-                <img src={PersonalPhotos} alt="Personal Photos"></img>
+                {
+                    lang === "fr" ? (
+                        <img src={PersonalPhotosFr} alt="Personal Photos"></img>
+
+                    ) 
+                    :
+                    (
+                        <img src={PersonalPhotos} alt="Personal Photos"></img>
+                    )
+                }
             </div>
             <div className="photos">
 

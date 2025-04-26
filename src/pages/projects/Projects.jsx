@@ -4,6 +4,7 @@ import './Projects.css';
 import './Projects.mobile.css';
 import NavBar from '../../components/navbar/NavBar'
 import ProjectsEmpty from '../../assets/images/projects-empty.png';
+import ProjectsEmptyFr from '../../assets/images/projects-empty-fr.png';
 
 const Projects = ({ setLang, lang }) => {
     return (
@@ -12,7 +13,15 @@ const Projects = ({ setLang, lang }) => {
                 <NavBar section='projects' setLang={setLang} lang={lang} />
             </div>
             <div className="projects-empty">
-                <img src={ProjectsEmpty} alt="Nothing to see here (yet)" />
+                {
+                    lang === 'fr' ? (
+                        <img src={ProjectsEmptyFr} alt="Rien a voir ici (pour l'instant)" />
+                    )
+                    : 
+                    (
+                        <img src={ProjectsEmpty} alt="Nothing to see here (yet)" />
+                    )
+                }
             </div>
         </div>
     );

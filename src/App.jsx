@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Projects from "./pages/projects/Projects";
+import DigitalBusinessCard from "./projects/digital business card/DigitalBusinessCard";
 
 function App() {
   const [lang, setLang] = useState("en");
@@ -16,6 +17,7 @@ function App() {
           <Route exact path='/' element={<Home setLang={setLang} lang={lang} />}></Route>
           <Route exact path='/about' element={<About setLang={setLang} lang={lang} />}></Route>
           <Route exact path='/projects' element={<Projects setLang={setLang} lang={lang} />}></Route>
+          <Route exact path='/digital-business-card' element={<DigitalBusinessCard />}></Route>
           <Route path="*" element={<Navigate to='/' />}></Route>
         </Routes>
       </Router>
