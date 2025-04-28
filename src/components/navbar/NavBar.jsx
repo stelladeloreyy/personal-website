@@ -95,7 +95,9 @@ const Header = ({ section, setLang, lang }) => {
                             onMouseLeave={() => setFrHover(false)}>
                                 <img src={FrenchSwitch} alt="FR"/>
                         </button>
-                        {(lang==="fr" || frHover) && <img src={Underline} className="underline" alt="underline" />}
+                        <div className="center">
+                            {(lang==="fr" || frHover) && <img src={Underline} className="underline" alt="underline" />}
+                        </div>
                     </div>
                 </div>
             </div>
