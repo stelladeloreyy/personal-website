@@ -103,9 +103,6 @@ const ContactMe = ({ lang, setLang }) => {
                     )
                 }
             </div>
-            <div className="photos">
-
-            </div>
             <div className="footer">
                 <Footer lang={lang} />
             </div>

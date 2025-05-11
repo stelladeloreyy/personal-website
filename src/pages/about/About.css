@@ -7,10 +7,14 @@ h1 {
     padding: 0px;
     margin-block: 0;
     font-family: "Pinyon Script", cursive;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 400;
     font-style: normal;
     color: #9c4d95;
+}
+
+.greeting-text h1 {
+    line-height: 85px;
 }
 
 h2 {
@@ -18,7 +22,7 @@ h2 {
     padding: 0;
     margin-block: 0;
     font-family: "STIX Two Text", serif;
-    font-size: 25px;;
+    font-size: 30px;;
     font-weight: 400;
     font-style: normal;
     color: #333333;
@@ -70,6 +74,7 @@ a:hover {
 
 .introduction-container p{
     font-family: "Inter";
+    font-size: 15px;
     color: #333333;
     line-height: 20px;
 }
@@ -81,7 +86,7 @@ a:hover {
 }
 
 .personal-photos-container img {
-    width: 60vw;
+    width: 55vw;
 }
 
 .introduction-container {
@@ -90,7 +95,8 @@ a:hover {
     justify-content: center;
     gap: 3%;
     margin-top: 8%;
-    margin-left: 14%;
+    margin-left: 20%;
+    margin-right: 5%;
 }
 
 .introduction-container img {
@@ -120,7 +126,7 @@ a:hover {
     justify-content: center;
     gap: 5px;
     align-items: baseline;
-    margin-top: 6%;
+    margin-top: 10%;
 }
 
 .job-experience {
