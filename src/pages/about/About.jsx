@@ -28,8 +28,7 @@ const ContactMe = ({ lang, setLang }) => {
                             </div>
                             <div className="intro-body fr">
                                 <p>
-                                    Salut, je m'appelle Stella ! En ce moment, je travaille comme stagiaire 
-                                    développeuse, mais je retournerai cet été étudier <b>l'Informatique @ Waterloo</b> et <b>l'Administration des affaires @ Laurier</b>.
+                                    Salut, je m'appelle Stella ! En ce moment, j'étude <b>l'Informatique @ Waterloo</b> et <b>l'Administration des affaires @ Laurier</b>, mais je retournerai au travaille cet hiver (embauchez-moi s'il vous plaît).
                                     <br /><br />
                                     En dehors de ma vie "professionnelle", <b>j'adooooooore</b> chiner, le karaoké
                                     et dépenser tout mon argent en nourriture :P Tu devrais vraiment écouter
@@ -46,8 +45,7 @@ const ContactMe = ({ lang, setLang }) => {
                             </div>
                             <div className="intro-body en">
                                 <p>
-                                    Hey, I'm Stella! Right now I'm on a coop term working as a software 
-                                    engineer, but I'll be heading back to study <b>Computer Science @ Waterloo</b> and <b>Business Administration @ Laurier</b> this summer.
+                                    Hey, I'm Stella! I'm currently studying <b>Computer Science @ Waterloo</b> and <b>Business Administration @ Laurier</b>, and I'll be back to work this winter (please hire me).
                                     <br /><br />
                                     Outside of my "professional" life, I <b>loooooove</b> thrifting, karaoke, and
                                     wasting all my money on food :P You should totally check out some of my
