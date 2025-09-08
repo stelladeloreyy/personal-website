@@ -7,14 +7,45 @@ import Footer from '../../components/footer/Footer';
 import PersonalPhotos from '../../assets/images/about-me-photos.png';
 import PersonalPhotosFr from '../../assets/images/about-me-photos-fr.png';
 import Goose from '../../assets/images/goose-print.png';
+import { useRef, useState, useEffect } from "react";
 
 const ContactMe = ({ lang, setLang }) => {
+
+    // Custom hook for intersection observer
+    function useFadeInOnView() {
+        const ref = useRef(null);
+        const [visible, setVisible] = useState(false);
+        useEffect(() => {
+            const node = ref.current;
+            if (!node) return;
+            const observer = new window.IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        setVisible(true);
+                        observer.disconnect(); // Only animate once
+                    }
+                },
+                { threshold: 0.2 }
+            );
+            observer.observe(node);
+            return () => observer.disconnect();
+        }, []);
+        return [ref, visible];
+    }
+
+    const [introRef, introVisible] = useFadeInOnView();
+    const [greetRef, greetVisible] = useFadeInOnView();
+    const [photosRef, photosVisible] = useFadeInOnView();
+
     return (
         <div className="contactme-container">
             <div className="header-sticky">
                 <NavBar section='about' setLang={setLang} lang={lang} />
             </div>
-            <div className="introduction-container">
+            <div
+                className={`introduction-container${introVisible ? ' fade-in-up' : ''}`}
+                ref={introRef}
+            >
                 <div className="goose-container">
                     <img src={Goose} alt="Goose illustration" />
                 </div>
@@ -56,7 +87,10 @@ const ContactMe = ({ lang, setLang }) => {
             </div>
             {
                 lang === "fr" ? (
-                    <div className="greeting-text fr">
+                    <div
+                        className={`greeting-text fr${greetVisible ? ' fade-in-up' : ''}`}
+                        ref={greetRef}
+                    >
                         <div className="mobile-greeting-split">
                             <h2>C'est si </h2> 
                             <h1>charmant </h1>
@@ -66,16 +100,21 @@ const ContactMe = ({ lang, setLang }) => {
                 ) 
                 : 
                 (
-                    <div className="greeting-text en">
+                    <div
+                        className={`greeting-text en${greetVisible ? ' fade-in-up' : ''}`}
+                        ref={greetRef}
+                    >
                         <h2>It's so </h2> <h1>lovely </h1> <h2>to meet you!</h2>
                     </div>
                 )
             }
-            <div className="personal-photos-container">
+            <div
+                className={`personal-photos-container${photosVisible ? ' fade-in-up' : ''}`}
+                ref={photosRef}
+            >
                 {
                     lang === "fr" ? (
                         <img src={PersonalPhotosFr} alt="Personal Photos"></img>
-
                     ) 
                     :
                     (

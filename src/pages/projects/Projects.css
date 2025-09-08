@@ -75,7 +75,26 @@ b {
 .sticky-note {
     position: relative;
     display: inline-block;
+    opacity: 0;
+    transform: translateY(40px);
     transition: transform 0.2s ease;
+}
+
+.fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .sticky-note:hover {

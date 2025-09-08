@@ -208,4 +208,26 @@
         width: 35vw;
         z-index: -1;
     }
+
+    .introduction-container,
+    .greeting-text,
+    .personal-photos-container {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    .fade-in-up {
+        opacity: 1;
+        transform: translateY(0);
+        animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 }
