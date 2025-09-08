@@ -7,8 +7,6 @@ import Footer from '../../components/footer/Footer';
 import PersonalPhotos from '../../assets/images/about-me-photos.png';
 import PersonalPhotosFr from '../../assets/images/about-me-photos-fr.png';
 import Goose from '../../assets/images/goose-print.png';
-// import TicketSunLife from '../assets/images/ticket-sunlife.png'
-// import TicketFirstOntario from '../assets/images/ticket-firstontario.png'
 
 const ContactMe = ({ lang, setLang }) => {
     return (
@@ -56,22 +54,6 @@ const ContactMe = ({ lang, setLang }) => {
                     )
                 }
             </div>
-            {/* <div className="job-experience">
-                <div className="title-container">
-                    <div className="experience-title">
-                        <h1>E</h1><h2>xperience</h2>
-                    </div>
-                </div>
-                <div className="experience-container first">
-                    <img src={TicketSunLife} alt="Vintage ticket">
-                    </img>
-                </div>
-                <div className="experience-container second">
-                    <img src={TicketFirstOntario} alt="Vintage ticket">
-                    
-                    </img>
-                </div>
-            </div> */}
             {
                 lang === "fr" ? (
                     <div className="greeting-text fr">

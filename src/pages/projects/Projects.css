@@ -1,3 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap");
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    margin-block: 0;
+    font-family: "Pinyon Script", cursive;
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    color: #9c4d95;
+}
+
+h2 {
+    padding: 0;
+    margin-block: 0;
+    font-family: "STIX Two Text", serif;
+    font-size: 23px;;
+    font-weight: 400;
+    font-style: normal;
+    color: #333333;
+}
+
+p {
+    font-family: "Inter";
+    font-size: 12px;
+    font-weight: 400;
+    color: #333333;
+}
+
+b {
+    color: #9c4d95;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
 .projects-container {
     display: flex;
     flex-direction: column;
@@ -22,11 +65,11 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .project-notes-row img {
-    width: 25vw;
+    width: 400px;
 }
 
 .sticky-note {
@@ -76,4 +119,44 @@
 
 .sticky-note:hover .show-grow2 {
     opacity: 1;
+}
+
+.sticky-note-text {
+    position: absolute;
+    font-size: 2vw;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.note-1 {
+    top: 48%;
+    left: 48%;
+    transform: translate(-50%, -50%) rotate(-3deg);
+}
+
+.note-2 {
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(2deg);
+}
+
+.note-3 {
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(2deg);
+}
+
+.note-4 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.note-5 {
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-1deg);
 }
