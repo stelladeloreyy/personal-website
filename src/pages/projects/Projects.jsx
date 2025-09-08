@@ -44,7 +44,6 @@ const Projects = ({ setLang, lang }) => {
     const [note4Ref, note4Visible] = useFadeInOnView();
     const [note5Ref, note5Visible] = useFadeInOnView();
 
-    // Track image load state for each sticky note
     const [imagesLoaded, setImagesLoaded] = useState({
         note1: false,
         note2: false,
@@ -52,7 +51,7 @@ const Projects = ({ setLang, lang }) => {
         note4: false,
         note5: false
     });
-    // Only used for sticky-note fade-in, not sparkles
+
     const isNoteLoaded = (note) => imagesLoaded[note];
 
     return (
@@ -70,7 +69,6 @@ const Projects = ({ setLang, lang }) => {
                             ref={note1Ref}
                         >
                             <span className="sticky-note-text note-1">
-                                {/* ...existing code... */}
                                 {lang === "fr" ? (
                                     <div className="header">
                                         <h1>R</h1><h2>éseau </h2>

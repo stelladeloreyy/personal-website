@@ -110,7 +110,18 @@ b {
     flex-direction: row;
     justify-content: center;
     padding-bottom: 30px;
-    gap: 60px;
+    gap: 0px;
+}
+
+.sticky-note .show-grow1,
+.sticky-note .show-grow2 {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.sticky-note:hover .show-grow1,
+.sticky-note:hover .show-grow2 {
+    opacity: 1;
 }
 
 .sticky-note .show-grow1 {
@@ -119,8 +130,6 @@ b {
     right: -10px;
     width: 120px;
     height: 120px;
-    opacity: 0;
-    transition: opacity 0.2s ease;
     pointer-events: none;
     z-index: 2;
 }
@@ -131,8 +140,6 @@ b {
     bottom: -10px;
     left: -10px;
     width: 140px;
-    opacity: 0;
-    transition: opacity 0.2s ease;
     pointer-events: none;
     z-index: 2;
 }
