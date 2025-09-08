@@ -19,12 +19,104 @@
         z-index: 2;
     }
     
-    .projects-empty {
+    .project-notes {
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        margin-bottom: 50px;
     }
-    
-    .projects-empty img {
-        width: 200vw;
+
+    .project-notes-row img {
+        width: 400px;
+    }
+
+    .sticky-note {
+        position: relative;
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+
+    .sticky-note:hover {
+        transform: scale(1.08);
+    }
+
+    .project-notes-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+        gap: 60px;
+    }
+
+    .sticky-note .show-grow1 {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 120px;
+        height: 120px;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .sticky-note:hover .show-grow1 {
+        opacity: 1;
+    }
+
+    .sticky-note .show-grow2 {
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+        width: 140px;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .sticky-note:hover .show-grow2 {
+        opacity: 1;
+    }
+
+    .sticky-note-text {
+        position: absolute;
+        font-size: 2vw;
+        font-weight: bold;
+        color: #222;
+        text-align: center;
+        pointer-events: none;
+        z-index: 3;
+    }
+
+    .note-1 {
+        top: 48%;
+        left: 48%;
+        transform: translate(-50%, -50%) rotate(-3deg);
+    }
+
+    .note-2 {
+        top: 49%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(2deg);
+    }
+
+    .note-3 {
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(2deg);
+    }
+
+    .note-4 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    .note-5 {
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-1deg);
     }
 }
