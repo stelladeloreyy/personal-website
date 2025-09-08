@@ -1,3 +1,7 @@
+.hidden {
+    display: none !important;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap");
@@ -121,9 +125,6 @@ b {
     z-index: 2;
 }
 
-.sticky-note:hover .show-grow1 {
-    opacity: 1;
-}
 
 .sticky-note .show-grow2 {
     position: absolute;
@@ -136,9 +137,6 @@ b {
     z-index: 2;
 }
 
-.sticky-note:hover .show-grow2 {
-    opacity: 1;
-}
 
 .sticky-note-text {
     position: absolute;

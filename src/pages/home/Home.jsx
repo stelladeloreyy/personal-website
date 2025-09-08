@@ -30,6 +30,11 @@ const useFadeInOnView = () => {
 
 const Home = ({ lang, setLang }) => {    
     const [linedRef, linedVisible] = useFadeInOnView();
+    const [imagesLoaded, setImagesLoaded] = useState({ paper: false, name: false });
+
+    // Helper to check if all images are loaded
+    const allImagesLoaded = imagesLoaded.paper && imagesLoaded.name;
+
     return (
         <div className="home-container">
             <div className="header-sticky">
@@ -37,19 +42,24 @@ const Home = ({ lang, setLang }) => {
             </div>
             <div className="page-container">
                 <div
-                    className={`lined-page${linedVisible ? ' fade-in-up' : ''}`}
+                    className={`lined-page${linedVisible && allImagesLoaded ? ' fade-in-up' : ''}`}
                     ref={linedRef}
                 >
-                    <img className="paper-bg" src={LinedPage} alt="Ripped paper" />
-                    <img className="name-sketch" src={NameSketch} alt="Stella Delorey" />
+                    <img
+                        className={`paper-bg${imagesLoaded.paper ? ' fade-in-up' : ''}`}
+                        src={LinedPage}
+                        alt="Ripped paper"
+                        onLoad={() => setImagesLoaded(prev => ({ ...prev, paper: true }))}
+                    />
+                    <img
+                        className={`name-sketch${imagesLoaded.name ? ' fade-in-up' : ''}`}
+                        src={NameSketch}
+                        alt="Stella Delorey"
+                        onLoad={() => setImagesLoaded(prev => ({ ...prev, name: true }))}
+                    />
                 </div>
             </div>
-            {/* <div className="greeting-text">
-                <div className="greeting-rows">
-                    <p>It's so </p> <h1>lovely </h1> <p>to meet you!</p>
-                </div>
-            </div>
-            <div className="personal-photos"></div> */}
+            {/* ...existing code... */}
             <div className="footer">
                 <Footer lang={lang} />
             </div>

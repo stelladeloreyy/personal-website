@@ -36,6 +36,8 @@ const ContactMe = ({ lang, setLang }) => {
     const [introRef, introVisible] = useFadeInOnView();
     const [greetRef, greetVisible] = useFadeInOnView();
     const [photosRef, photosVisible] = useFadeInOnView();
+    const [imagesLoaded, setImagesLoaded] = useState({ goose: false, photos: false });
+    const allImagesLoaded = imagesLoaded.goose && imagesLoaded.photos;
 
     return (
         <div className="contactme-container">
@@ -43,12 +45,18 @@ const ContactMe = ({ lang, setLang }) => {
                 <NavBar section='about' setLang={setLang} lang={lang} />
             </div>
             <div
-                className={`introduction-container${introVisible ? ' fade-in-up' : ''}`}
+                className={`introduction-container${introVisible && allImagesLoaded ? ' fade-in-up' : ''}`}
                 ref={introRef}
             >
                 <div className="goose-container">
-                    <img src={Goose} alt="Goose illustration" />
+                    <img
+                        src={Goose}
+                        alt="Goose illustration"
+                        className={imagesLoaded.goose ? 'fade-in-up' : ''}
+                        onLoad={() => setImagesLoaded(prev => ({ ...prev, goose: true }))}
+                    />
                 </div>
+                {/* ...existing code for introduction text... */}
                 {
                     lang === "fr" ? (
                         <div className="introduction-text">
@@ -85,6 +93,7 @@ const ContactMe = ({ lang, setLang }) => {
                     )
                 }
             </div>
+            {/* ...existing code for greeting text... */}
             {
                 lang === "fr" ? (
                     <div
@@ -109,16 +118,26 @@ const ContactMe = ({ lang, setLang }) => {
                 )
             }
             <div
-                className={`personal-photos-container${photosVisible ? ' fade-in-up' : ''}`}
+                className={`personal-photos-container${photosVisible && imagesLoaded.photos ? ' fade-in-up' : ''}`}
                 ref={photosRef}
             >
                 {
                     lang === "fr" ? (
-                        <img src={PersonalPhotosFr} alt="Personal Photos"></img>
+                        <img
+                            src={PersonalPhotosFr}
+                            alt="Personal Photos"
+                            className={imagesLoaded.photos ? 'fade-in-up' : ''}
+                            onLoad={() => setImagesLoaded(prev => ({ ...prev, photos: true }))}
+                        />
                     ) 
                     :
                     (
-                        <img src={PersonalPhotos} alt="Personal Photos"></img>
+                        <img
+                            src={PersonalPhotos}
+                            alt="Personal Photos"
+                            className={imagesLoaded.photos ? 'fade-in-up' : ''}
+                            onLoad={() => setImagesLoaded(prev => ({ ...prev, photos: true }))}
+                        />
                     )
                 }
             </div>

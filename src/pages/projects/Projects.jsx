@@ -44,6 +44,17 @@ const Projects = ({ setLang, lang }) => {
     const [note4Ref, note4Visible] = useFadeInOnView();
     const [note5Ref, note5Visible] = useFadeInOnView();
 
+    // Track image load state for each sticky note
+    const [imagesLoaded, setImagesLoaded] = useState({
+        note1: false,
+        note2: false,
+        note3: false,
+        note4: false,
+        note5: false
+    });
+    // Only used for sticky-note fade-in, not sparkles
+    const isNoteLoaded = (note) => imagesLoaded[note];
+
     return (
         <div className="projects-container">
             <div className="header-sticky">
@@ -55,7 +66,7 @@ const Projects = ({ setLang, lang }) => {
                 <div className="project-notes-row">
                     <a href="https://github.com/stelladeloreyy/neural-network-scratch" target="_blank" rel="noopener noreferrer">
                         <div
-                            className={`sticky-note sticky-note-overlay${note1Visible ? ' fade-in-up' : ''}`}
+                            className={`sticky-note sticky-note-overlay${note1Visible && isNoteLoaded('note1') ? ' fade-in-up' : ''}`}
                             ref={note1Ref}
                         >
                             <span className="sticky-note-text note-1">
@@ -86,14 +97,19 @@ const Projects = ({ setLang, lang }) => {
                                     </div>
                                 )}
                             </span>
-                            <img src={StickyNote1} alt="Sticky Note" className="sticky-img" onLoad={e => e.target.classList.add('loaded')} />
-                            <img src={Sparkles1} className="show-grow1 sticky-img" alt="Sticky Note" onLoad={e => e.target.classList.add('loaded')} />
-                            <img src={Sparkles2} className="show-grow2 sticky-img" alt="Sticky Note" onLoad={e => e.target.classList.add('loaded')} />
+                            <img
+                                src={StickyNote1}
+                                alt="Sticky Note"
+                                className={imagesLoaded.note1 ? 'sticky-img fade-in-up' : 'sticky-img'}
+                                onLoad={() => setImagesLoaded(prev => ({ ...prev, note1: true }))}
+                            />
+                            <img src={Sparkles1} className="show-grow1" alt="Sticky Note" />
+                            <img src={Sparkles2} className="show-grow2" alt="Sticky Note" />
                         </div>
                     </a>
                     <a href="https://github.com/stelladeloreyy/doodles" target="_blank" rel="noopener noreferrer">
                         <div
-                            className={`sticky-note${note2Visible ? ' fade-in-up' : ''}`}
+                            className={`sticky-note${note2Visible && isNoteLoaded('note2') ? ' fade-in-up' : ''}`}
                             ref={note2Ref}
                         >
                             <span className="sticky-note-text note-2">
@@ -115,14 +131,19 @@ const Projects = ({ setLang, lang }) => {
                                     </div>
                                 )}
                             </span>
-                            <img src={StickyNote2} alt="Sticky Note" className="sticky-img" onLoad={e => e.target.classList.add('loaded')} />
-                            <img src={Sparkles1} className="show-grow1 sticky-img" alt="Sticky Note" onLoad={e => e.target.classList.add('loaded')} />
-                            <img src={Sparkles2} className="show-grow2 sticky-img" alt="Sticky Note" onLoad={e => e.target.classList.add('loaded')} />
+                            <img
+                                src={StickyNote2}
+                                alt="Sticky Note"
+                                className={imagesLoaded.note2 ? 'sticky-img fade-in-up' : 'sticky-img'}
+                                onLoad={() => setImagesLoaded(prev => ({ ...prev, note2: true }))}
+                            />
+                            <img src={Sparkles1} className="show-grow1" alt="Sticky Note" />
+                            <img src={Sparkles2} className="show-grow2" alt="Sticky Note" />
                         </div>
                     </a>
                     <a href="https://github.com/stelladeloreyy/personal-website" target="_blank" rel="noopener noreferrer">
                         <div
-                            className={`sticky-note${note3Visible ? ' fade-in-up' : ''}`}
+                            className={`sticky-note${note3Visible && isNoteLoaded('note3') ? ' fade-in-up' : ''}`}
                             ref={note3Ref}
                         >
                             <span className="sticky-note-text note-3">
@@ -152,16 +173,21 @@ const Projects = ({ setLang, lang }) => {
                                     </div>
                                 )}
                             </span>
-                            <img src={StickyNote6} alt="Sticky Note" className="sticky-img" onLoad={e => e.target.classList.add('loaded')} />
-                            <img src={Sparkles1} className="show-grow1 sticky-img" alt="Sticky Note" onLoad={e => e.target.classList.add('loaded')} />
-                            <img src={Sparkles2} className="show-grow2 sticky-img" alt="Sticky Note" onLoad={e => e.target.classList.add('loaded')} />
+                            <img
+                                src={StickyNote6}
+                                alt="Sticky Note"
+                                className={imagesLoaded.note3 ? 'sticky-img fade-in-up' : 'sticky-img'}
+                                onLoad={() => setImagesLoaded(prev => ({ ...prev, note3: true }))}
+                            />
+                            <img src={Sparkles1} className="show-grow1" alt="Sticky Note" />
+                            <img src={Sparkles2} className="show-grow2" alt="Sticky Note" />
                         </div>
                     </a>
                 </div>
                 <div className="project-notes-row">
                     <a href="https://github.com/stelladeloreyy/biquadris" target="_blank" rel="noopener noreferrer">
                         <div
-                            className={`sticky-note${note4Visible ? ' fade-in-up' : ''}`}
+                            className={`sticky-note${note4Visible && isNoteLoaded('note4') ? ' fade-in-up' : ''}`}
                             ref={note4Ref}
                         >
                             <span className="sticky-note-text note-4">
@@ -182,14 +208,19 @@ const Projects = ({ setLang, lang }) => {
                                     </div>
                                 )}
                             </span>
-                            <img src={StickyNote3} alt="Sticky Note" />
+                            <img
+                                src={StickyNote3}
+                                alt="Sticky Note"
+                                className={imagesLoaded.note4 ? 'fade-in-up' : ''}
+                                onLoad={() => setImagesLoaded(prev => ({ ...prev, note4: true }))}
+                            />
                             <img src={Sparkles1} className="show-grow1" alt="Sticky Note" />
                             <img src={Sparkles2} className="show-grow2" alt="Sticky Note" />
                         </div>
                     </a>
                     <a href="https://github.com/stelladeloreyy/game-remakes" target="_blank" rel="noopener noreferrer">
                         <div
-                            className={`sticky-note${note5Visible ? ' fade-in-up' : ''}`}
+                            className={`sticky-note${note5Visible && isNoteLoaded('note5') ? ' fade-in-up' : ''}`}
                             ref={note5Ref}
                         >
                             <span className="sticky-note-text note-5">
@@ -219,7 +250,12 @@ const Projects = ({ setLang, lang }) => {
                                     </div>
                                 )}
                             </span>
-                            <img src={StickyNote4} alt="Sticky Note" />
+                            <img
+                                src={StickyNote4}
+                                alt="Sticky Note"
+                                className={imagesLoaded.note5 ? 'fade-in-up' : ''}
+                                onLoad={() => setImagesLoaded(prev => ({ ...prev, note5: true }))}
+                            />
                             <img src={Sparkles1} className="show-grow1" alt="Sticky Note" />
                             <img src={Sparkles2} className="show-grow2" alt="Sticky Note" />
                         </div>
