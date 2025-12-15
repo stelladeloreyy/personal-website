@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+import { motion } from 'motion/react';
+
 import './Projects.css';
 import './Projects.mobile.css';
 import NavBar from '../../components/navbar/NavBar'
@@ -13,37 +16,14 @@ import StickyNote6 from '../../assets/images/sticky-note6.png';
 import Sparkles1 from '../../assets/images/corner-sparkle1.png';
 import Sparkles2 from '../../assets/images/corner-sparkle2.png';
 
-import { useRef, useState, useEffect } from 'react';
-
-
-const useFadeInOnView = () => {
-    const ref = useRef(null);
-    const [visible, setVisible] = useState(false);
-    useEffect(() => {
-        const node = ref.current;
-        if (!node) return;
-        const observer = new window.IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setVisible(true);
-                    observer.disconnect();
-                }
-            },
-            { threshold: 0.2 }
-        );
-        observer.observe(node);
-        return () => observer.disconnect();
-    }, []);
-    return [ref, visible];
+const fadeInNote = {
+    initial: { opacity: 0, y: 40 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.6 },
+    transition: { duration: 0.6, ease: 'easeOut' },
 };
 
 const Projects = ({ setLang, lang }) => {
-    const [note1Ref, note1Visible] = useFadeInOnView();
-    const [note2Ref, note2Visible] = useFadeInOnView();
-    const [note3Ref, note3Visible] = useFadeInOnView();
-    const [note4Ref, note4Visible] = useFadeInOnView();
-    const [note5Ref, note5Visible] = useFadeInOnView();
-
     const [imagesLoaded, setImagesLoaded] = useState({
         note1: false,
         note2: false,
@@ -52,21 +32,22 @@ const Projects = ({ setLang, lang }) => {
         note5: false
     });
 
-    const isNoteLoaded = (note) => imagesLoaded[note];
-
     return (
         <div className="projects-container">
             <div className="header-sticky">
-                <NavBar section='project-notes' setLang={setLang} lang={lang} />
+                <NavBar section='projects' setLang={setLang} lang={lang} />
             </div>
             <div className="projects-header">
             </div>
             <div className="project-notes">
                 <div className="project-notes-row">
                     <a href="https://github.com/stelladeloreyy/neural-network-scratch" target="_blank" rel="noopener noreferrer">
-                        <div
-                            className={`sticky-note sticky-note-overlay${note1Visible && isNoteLoaded('note1') ? ' fade-in-up' : ''}`}
-                            ref={note1Ref}
+                        <motion.div
+                            className="sticky-note sticky-note-overlay"
+                            {...fadeInNote}
+                            whileHover={{ scale: 1.08, zIndex: 100 }}
+                            whileTap={{ scale: 1.03, zIndex: 90 }}
+                            transition={{ duration: 0.6, ease: 'easeOut', scale: { duration: 0.18, ease: 'easeOut' } }}
                         >
                             <span className="sticky-note-text note-1">
                                 {lang === "fr" ? (
@@ -95,20 +76,26 @@ const Projects = ({ setLang, lang }) => {
                                     </div>
                                 )}
                             </span>
-                            <img
+                            <motion.img
                                 src={StickyNote1}
                                 alt="Sticky Note"
-                                className={imagesLoaded.note1 ? 'sticky-img fade-in-up' : 'sticky-img'}
+                                className="sticky-img"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={imagesLoaded.note1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                transition={{ duration: 0.6, ease: 'easeOut' }}
                                 onLoad={() => setImagesLoaded(prev => ({ ...prev, note1: true }))}
                             />
                             <img src={Sparkles1} className="show-grow1" alt="Sticky Note" />
                             <img src={Sparkles2} className="show-grow2" alt="Sticky Note" />
-                        </div>
+                        </motion.div>
                     </a>
                     <a href="https://github.com/stelladeloreyy/doodles" target="_blank" rel="noopener noreferrer">
-                        <div
-                            className={`sticky-note${note2Visible && isNoteLoaded('note2') ? ' fade-in-up' : ''}`}
-                            ref={note2Ref}
+                        <motion.div
+                            className="sticky-note"
+                            {...fadeInNote}
+                            whileHover={{ scale: 1.08, zIndex: 100 }}
+                            whileTap={{ scale: 1.03, zIndex: 90 }}
+                            transition={{ duration: 0.6, ease: 'easeOut', scale: { duration: 0.18, ease: 'easeOut' } }}
                         >
                             <span className="sticky-note-text note-2">
                                 <div className="header">
@@ -129,20 +116,26 @@ const Projects = ({ setLang, lang }) => {
                                     </div>
                                 )}
                             </span>
-                            <img
+                            <motion.img
                                 src={StickyNote2}
                                 alt="Sticky Note"
-                                className={imagesLoaded.note2 ? 'sticky-img fade-in-up' : 'sticky-img'}
+                                className="sticky-img"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={imagesLoaded.note2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                transition={{ duration: 0.6, ease: 'easeOut' }}
                                 onLoad={() => setImagesLoaded(prev => ({ ...prev, note2: true }))}
                             />
                             <img src={Sparkles1} className="show-grow1" alt="Sticky Note" />
                             <img src={Sparkles2} className="show-grow2" alt="Sticky Note" />
-                        </div>
+                        </motion.div>
                     </a>
                     <a href="https://github.com/stelladeloreyy/personal-website" target="_blank" rel="noopener noreferrer">
-                        <div
-                            className={`sticky-note${note3Visible && isNoteLoaded('note3') ? ' fade-in-up' : ''}`}
-                            ref={note3Ref}
+                        <motion.div
+                            className="sticky-note"
+                            {...fadeInNote}
+                            whileHover={{ scale: 1.08, zIndex: 100 }}
+                            whileTap={{ scale: 1.03, zIndex: 90 }}
+                            transition={{ duration: 0.6, ease: 'easeOut', scale: { duration: 0.18, ease: 'easeOut' } }}
                         >
                             <span className="sticky-note-text note-3">
                                 {lang === "fr" ? (
@@ -171,22 +164,28 @@ const Projects = ({ setLang, lang }) => {
                                     </div>
                                 )}
                             </span>
-                            <img
+                            <motion.img
                                 src={StickyNote6}
                                 alt="Sticky Note"
-                                className={imagesLoaded.note3 ? 'sticky-img fade-in-up' : 'sticky-img'}
+                                className="sticky-img"
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={imagesLoaded.note3 ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                transition={{ duration: 0.6, ease: 'easeOut' }}
                                 onLoad={() => setImagesLoaded(prev => ({ ...prev, note3: true }))}
                             />
                             <img src={Sparkles1} className="show-grow1" alt="Sticky Note" />
                             <img src={Sparkles2} className="show-grow2" alt="Sticky Note" />
-                        </div>
+                        </motion.div>
                     </a>
                 </div>
                 <div className="project-notes-row">
                     <a href="https://github.com/stelladeloreyy/biquadris" target="_blank" rel="noopener noreferrer">
-                        <div
-                            className={`sticky-note${note4Visible && isNoteLoaded('note4') ? ' fade-in-up' : ''}`}
-                            ref={note4Ref}
+                        <motion.div
+                            className="sticky-note"
+                            {...fadeInNote}
+                            whileHover={{ scale: 1.08, zIndex: 100 }}
+                            whileTap={{ scale: 1.03, zIndex: 90 }}
+                            transition={{ duration: 0.6, ease: 'easeOut', scale: { duration: 0.18, ease: 'easeOut' } }}
                         >
                             <span className="sticky-note-text note-4">
                                 <div className="header">
@@ -206,20 +205,25 @@ const Projects = ({ setLang, lang }) => {
                                     </div>
                                 )}
                             </span>
-                            <img
+                            <motion.img
                                 src={StickyNote3}
                                 alt="Sticky Note"
-                                className={imagesLoaded.note4 ? 'fade-in-up' : ''}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={imagesLoaded.note4 ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                transition={{ duration: 0.6, ease: 'easeOut' }}
                                 onLoad={() => setImagesLoaded(prev => ({ ...prev, note4: true }))}
                             />
                             <img src={Sparkles1} className="show-grow1" alt="Sticky Note" />
                             <img src={Sparkles2} className="show-grow2" alt="Sticky Note" />
-                        </div>
+                        </motion.div>
                     </a>
                     <a href="https://github.com/stelladeloreyy/game-remakes" target="_blank" rel="noopener noreferrer">
-                        <div
-                            className={`sticky-note${note5Visible && isNoteLoaded('note5') ? ' fade-in-up' : ''}`}
-                            ref={note5Ref}
+                        <motion.div
+                            className="sticky-note"
+                            {...fadeInNote}
+                            whileHover={{ scale: 1.08, zIndex: 100 }}
+                            whileTap={{ scale: 1.03, zIndex: 90 }}
+                            transition={{ duration: 0.6, ease: 'easeOut', scale: { duration: 0.18, ease: 'easeOut' } }}
                         >
                             <span className="sticky-note-text note-5">
                                 {lang === "fr" ? (
@@ -248,21 +252,29 @@ const Projects = ({ setLang, lang }) => {
                                     </div>
                                 )}
                             </span>
-                            <img
+                            <motion.img
                                 src={StickyNote4}
                                 alt="Sticky Note"
-                                className={imagesLoaded.note5 ? 'fade-in-up' : ''}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={imagesLoaded.note5 ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                                transition={{ duration: 0.6, ease: 'easeOut' }}
                                 onLoad={() => setImagesLoaded(prev => ({ ...prev, note5: true }))}
                             />
                             <img src={Sparkles1} className="show-grow1" alt="Sticky Note" />
                             <img src={Sparkles2} className="show-grow2" alt="Sticky Note" />
-                        </div>
+                        </motion.div>
                     </a>
                 </div>
             </div>
-            <div className="footer">
+            <motion.div
+                className="footer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.6 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+            >
                 <Footer lang={lang} />
-            </div>
+            </motion.div>
         </div>
     );
 };

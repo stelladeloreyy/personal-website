@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "motion/react";
 
 import './About.css';
 import './About.mobile.css';
@@ -7,56 +8,45 @@ import Footer from '../../components/footer/Footer';
 import PersonalPhotos from '../../assets/images/about-me-photos.png';
 import PersonalPhotosFr from '../../assets/images/about-me-photos-fr.png';
 import Goose from '../../assets/images/goose-print.png';
-import { useRef, useState, useEffect } from "react";
+
+const fadeInUp = {
+    initial: { opacity: 0, y: 40 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.1, margin: '0px 0px 0px 0px' },
+    transition: { duration: 0.6, ease: 'easeOut' },
+};
+
+const fadeInMid = {
+    initial: { opacity: 0, y: 40 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true, amount: 0.1, margin: '0px 0px -15% 0px' },
+    transition: { duration: 0.6, ease: 'easeOut' },
+};
 
 const ContactMe = ({ lang, setLang }) => {
-
-    // Custom hook for intersection observer
-    function useFadeInOnView() {
-        const ref = useRef(null);
-        const [visible, setVisible] = useState(false);
-        useEffect(() => {
-            const node = ref.current;
-            if (!node) return;
-            const observer = new window.IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting) {
-                        setVisible(true);
-                        observer.disconnect(); // Only animate once
-                    }
-                },
-                { threshold: 0.2 }
-            );
-            observer.observe(node);
-            return () => observer.disconnect();
-        }, []);
-        return [ref, visible];
-    }
-
-    const [introRef, introVisible] = useFadeInOnView();
-    const [greetRef, greetVisible] = useFadeInOnView();
-    const [photosRef, photosVisible] = useFadeInOnView();
     const [imagesLoaded, setImagesLoaded] = useState({ goose: false, photos: false });
-    const allImagesLoaded = imagesLoaded.goose && imagesLoaded.photos;
+    const gooseLoaded = imagesLoaded.goose;
+    const photosLoaded = imagesLoaded.photos;
 
     return (
         <div className="contactme-container">
             <div className="header-sticky">
                 <NavBar section='about' setLang={setLang} lang={lang} />
             </div>
-            <div
-                className={`introduction-container${introVisible && allImagesLoaded ? ' fade-in-up' : ''}`}
-                ref={introRef}
+            <motion.div
+                className="introduction-container"
+                initial={fadeInUp.initial}
+                whileInView={gooseLoaded ? fadeInUp.whileInView : fadeInUp.initial}
+                viewport={fadeInUp.viewport}
+                transition={fadeInUp.transition}
             >
                 <div className="goose-container">
                     <img
                         src={Goose}
                         alt="Goose illustration"
-                        className={imagesLoaded.goose ? 'fade-in-up' : ''}
                         onLoad={() => setImagesLoaded(prev => ({ ...prev, goose: true }))}
                     />
                 </div>
-                {/* ...existing code for introduction text... */}
                 {
                     lang === "fr" ? (
                         <div className="introduction-text">
@@ -92,58 +82,50 @@ const ContactMe = ({ lang, setLang }) => {
                         </div>
                     )
                 }
-            </div>
-            {/* ...existing code for greeting text... */}
-            {
-                lang === "fr" ? (
-                    <div
-                        className={`greeting-text fr${greetVisible ? ' fade-in-up' : ''}`}
-                        ref={greetRef}
-                    >
-                        <div className="mobile-greeting-split">
-                            <h2>C'est si </h2> 
-                            <h1>charmant </h1>
-                        </div> 
-                        <h2>de te rencontrer !</h2>
-                    </div>
-                ) 
-                : 
-                (
-                    <div
-                        className={`greeting-text en${greetVisible ? ' fade-in-up' : ''}`}
-                        ref={greetRef}
-                    >
-                        <h2>It's so </h2> <h1>lovely </h1> <h2>to meet you!</h2>
-                    </div>
-                )
-            }
-            <div
-                className={`personal-photos-container${photosVisible && imagesLoaded.photos ? ' fade-in-up' : ''}`}
-                ref={photosRef}
+            </motion.div>
+            <motion.div
+                className="greeting-photos"
+                initial={fadeInMid.initial}
+                whileInView={photosLoaded ? fadeInMid.whileInView : fadeInMid.initial}
+                viewport={fadeInMid.viewport}
+                transition={fadeInMid.transition}
             >
                 {
                     lang === "fr" ? (
-                        <img
-                            src={PersonalPhotosFr}
-                            alt="Personal Photos"
-                            className={imagesLoaded.photos ? 'fade-in-up' : ''}
-                            onLoad={() => setImagesLoaded(prev => ({ ...prev, photos: true }))}
-                        />
-                    ) 
+                        <div className="greeting-text fr">
+                            <div className="mobile-greeting-split">
+                                <h2>C'est si </h2>
+                                <h1>charmant </h1>
+                            </div>
+                            <h2>de te rencontrer !</h2>
+                        </div>
+                    )
                     :
                     (
-                        <img
-                            src={PersonalPhotos}
-                            alt="Personal Photos"
-                            className={imagesLoaded.photos ? 'fade-in-up' : ''}
-                            onLoad={() => setImagesLoaded(prev => ({ ...prev, photos: true }))}
-                        />
+                        <div className="greeting-text en">
+                            <h2>It's so </h2>
+                            <h1>lovely </h1>
+                            <h2>to meet you!</h2>
+                        </div>
                     )
                 }
-            </div>
-            <div className="footer">
+                <div className="personal-photos-container">
+                    <img
+                        src={lang === "fr" ? PersonalPhotosFr : PersonalPhotos}
+                        alt="Personal Photos"
+                        onLoad={() => setImagesLoaded(prev => ({ ...prev, photos: true }))}
+                    />
+                </div>
+            </motion.div>
+            <motion.div
+                className="footer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+            >
                 <Footer lang={lang} />
-            </div>
+            </motion.div>
         </div>
     );
 };

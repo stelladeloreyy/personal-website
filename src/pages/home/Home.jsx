@@ -1,4 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { motion } from 'motion/react';
 
 import './Home.css';
 import './Home.mobile.css';
@@ -7,33 +8,8 @@ import Footer from '../../components/footer/Footer';
 import NameSketch from '../../assets/images/name-sketch.png';
 import LinedPage from '../../assets/images/ripped-paper.png'
 
-const useFadeInOnView = () => {
-    const ref = useRef(null);
-    const [visible, setVisible] = useState(false);
-    useEffect(() => {
-        const node = ref.current;
-        if (!node) return;
-        const observer = new window.IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setVisible(true);
-                    observer.disconnect();
-                }
-            },
-            { threshold: 0.2 }
-        );
-        observer.observe(node);
-        return () => observer.disconnect();
-    }, []);
-    return [ref, visible];
-};
-
 const Home = ({ lang, setLang }) => {    
-    const [linedRef, linedVisible] = useFadeInOnView();
     const [imagesLoaded, setImagesLoaded] = useState({ paper: false, name: false });
-
-    // Helper to check if all images are loaded
-    const allImagesLoaded = imagesLoaded.paper && imagesLoaded.name;
 
     return (
         <div className="home-container">
@@ -41,28 +17,44 @@ const Home = ({ lang, setLang }) => {
                 <NavBar section='home' setLang={setLang} lang={lang} />
             </div>
             <div className="page-container">
-                <div
-                    className={`lined-page${linedVisible && allImagesLoaded ? ' fade-in-up' : ''}`}
-                    ref={linedRef}
+                <motion.div
+                    className="lined-page"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.6 }}
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
                 >
-                    <img
-                        className={`paper-bg${imagesLoaded.paper ? ' fade-in-up' : ''}`}
+                    <motion.img
+                        className="paper-bg"
                         src={LinedPage}
                         alt="Ripped paper"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.6 }}
+                        transition={{ duration: 0.5, ease: 'easeOut' }}
                         onLoad={() => setImagesLoaded(prev => ({ ...prev, paper: true }))}
                     />
-                    <img
-                        className={`name-sketch${imagesLoaded.name ? ' fade-in-up' : ''}`}
+                    <motion.img
+                        className="name-sketch"
                         src={NameSketch}
                         alt="Stella Delorey"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.6 }}
+                        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
                         onLoad={() => setImagesLoaded(prev => ({ ...prev, name: true }))}
                     />
-                </div>
+                </motion.div>
             </div>
-            {/* ...existing code... */}
-            <div className="footer">
+            <motion.div
+                className="footer"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1, margin: '0px 0px -12% 0px' }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
+            >
                 <Footer lang={lang} />
-            </div>
+            </motion.div>
         </div>
     );
 };
